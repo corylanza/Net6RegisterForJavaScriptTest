@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove=".github\**" />
+    <Content Remove=".github\**" />
+    <EmbeddedResource Remove=".github\**" />
+    <None Remove=".github\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0-rc.2.21480.10" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0-rc.2.21480.10" PrivateAssets="all" />
   </ItemGroup>
