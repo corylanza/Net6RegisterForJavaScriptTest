@@ -1,6 +1,6 @@
 ﻿name: DeployToGitHubPages
 env:
-  PUBLISH_DIR: bin/Release/net6.0/publish/wwwroot
+  PUBLISH_DIR: release/wwwroot
 
 # Controls when the action will run
 on:
@@ -20,7 +20,7 @@ jobs:
         include-prerelease: true
 
     - name: Publish app
-      run: dotnet publish -c Release
+      run: dotnet publish -c Release -o release --nologo
 
     - name: Rewrite base href
       uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
